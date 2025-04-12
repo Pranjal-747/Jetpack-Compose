@@ -25,18 +25,31 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+/**
+ * Case 1
+ */
+
+/*@Preview(showSystemUi = true)
+@Composable
+fun Greeting(name: String = "abc") {
+    Text(
+        text = "Hello $name!",
+    )
+}*/
+
+/**
+ * Case 2
+ */
 @Composable
 fun Greeting(name: String) {
     Text(
         text = "Hello $name!",
-        modifier = Modifier
-            .padding(16.dp)         // Adds padding around the text
-            .fillMaxSize()       // Optional: Fills the available space
     )
 }
 
+// Preview without parameters, using default or hardcoded values
 @Preview(showSystemUi = true)
 @Composable
-fun GreetingPreview() {
-    Greeting("Pranjal")
+fun previewFunc() {
+    Greeting(name = "abc") // Hardcoding value for preview
 }
